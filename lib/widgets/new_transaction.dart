@@ -80,9 +80,9 @@ class _NewTransactionState extends State<NewTransaction> {
                           : 'picked date ${DateFormat.yMd().format(_selectedDate!)}',
                     ),
                   ),
-                  FlatButton(
+                  TextButton(
                     onPressed: _datePicker,
-                    child: Text(
+                    child: const Text(
                       'choose date',
                       style: TextStyle(color: Colors.red),
                     ),
@@ -90,16 +90,15 @@ class _NewTransactionState extends State<NewTransaction> {
                 ],
               ),
             ),
-            RaisedButton(
-              child: Text(
+            ElevatedButton(
+              onPressed: _submitData,
+              child: const Text(
                 'Add Transaction',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              textColor: Colors.black,
-              onPressed: _submitData,
-              color: Colors.amber,
+              // color: Colors.amber,
             ),
           ],
         ),
